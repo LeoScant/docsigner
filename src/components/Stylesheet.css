@@ -1,0 +1,123 @@
+.header{
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+.files input {
+  display: flex;
+
+  outline: 2px dashed #92b0b3;
+  outline-offset: -10px;
+  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  padding: 120px 0px 60px 44%;
+  text-align: center !important;
+  margin: 0;
+  width: 100% !important;
+}
+.files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
+  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+}
+.files{ position:relative}
+.files:after {  pointer-events: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 50px;
+  right: 0;
+  height: 56px;
+  content: "";
+  background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+  display: block;
+  margin: 0 auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.color input{ background-color:#f1f1f1;}
+.files:before {
+  position: absolute;
+  bottom: 10px;
+  left: 0;  pointer-events: none;
+  width: 100%;
+  right: 0;
+  height: 57px;
+  content: "Carica qui il tuo file .txt";
+  display: block;
+  margin: 0 auto;
+  color: #2ea591;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-group{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dataForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  flex-direction: column;
+  
+}
+
+.formEntry{
+  padding: 0.5em;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formLabel{
+  align-items: left;
+}
+.formInput{
+  align-items: right;
+  width: 60%;
+}
+
+.page{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+html, body, #root, #root>div{
+  height: 100%;
+}
+
+.textForm{
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  flex-grow: 20; 
+}
+
+.labels{
+  flex-grow: 1;
+  background-color: cadetblue;
+  padding: 2em;
+}
+
+.textFile{
+  flex-grow: 6;
+  padding: 2em;
+}
+
+.document{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dragLabel{
+  border-style: solid;
+  border-width: 2px;
+  width: fit-content;
+  display: inline-flex;
+}
