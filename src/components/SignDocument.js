@@ -1,22 +1,22 @@
-import React,{ useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Stylesheet.css';
 import TitleHeader from './TitleHeader';
 import Draggable from 'react-draggable';
 
-function SignDocument(props){
-    const[text,setText] = useState();
+function SignDocument(props) {
+    const [text, setText] = useState();
 
     useEffect(() => {
         showFile();
-	}, [props.location.selectedFile]);
+    }, [props.location.selectedFile]);
 
     const showFile = () => {
         const reader = new FileReader();
-        reader.onload = (e) => { 
+        reader.onload = (e) => {
             setText(e.target.result);
             console.log(text);
         };
-        if(props.location.selectedFile) reader.readAsText(props.location.selectedFile)
+        if (props.location.selectedFile) reader.readAsText(props.location.selectedFile)
     }
 
     return (
@@ -25,13 +25,20 @@ function SignDocument(props){
             <div className="textForm">
                 <div className="labels">
                     <h2>Campi</h2>
-
                     {props.location.formData && (
                         Object.entries(props.location.formData).map(([name, value]) => (
-                            <p key={name}><strong>{name}</strong>:  <Draggable bounds><div className="dragLabel">{value.toString()}</div></Draggable></p>
+                            <>
+                                <div className="listElement"><p key={name}><strong>{name}</strong>:</p>
+                                <Draggable bounds>
+                                    <div className="dragLabel">
+                                        {value.toString()}
+                                    </div>
+                                </Draggable>
+                                </div>
+                            </>
                         ))
                     )}
-                
+
                 </div>
                 <div className="textFile">
                     {text && (

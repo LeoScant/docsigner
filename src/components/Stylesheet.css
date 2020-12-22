@@ -119,5 +119,17 @@ html, body, #root, #root>div{
   border-style: solid;
   border-width: 2px;
   width: fit-content;
+  height: fit-content;
   display: inline-flex;
+  cursor: grab;
+  margin: 1em;
+}
+
+.dragLabel:active{
+  cursor: grabbing;
+}
+
+.listElement{
+  display: flex;
+  align-items: center;
 }
