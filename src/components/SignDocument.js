@@ -28,12 +28,13 @@ function SignDocument(props) {
                     {props.location.formData && (
                         Object.entries(props.location.formData).map(([name, value]) => (
                             <>
-                                <p key={name}><strong>{name}</strong>:</p>
+                                <div><p key={name}><strong>{name}</strong>:</p>
                                 <Draggable bounds>
                                     <div className="dragLabel">
                                         {value.toString()}
                                     </div>
                                 </Draggable>
+                                </div>
                             </>
                         ))
                     )}
