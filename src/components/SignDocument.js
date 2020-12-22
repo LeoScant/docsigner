@@ -27,16 +27,14 @@ function SignDocument(props) {
                     <h2>Campi</h2>
                     {props.location.formData && (
                         Object.entries(props.location.formData).map(([name, value]) => (
-                            <>
-                                <div className="listElement">
-                                    <p key={name}><strong>{name}</strong>:</p>
-                                    <Draggable bounds>
-                                        <div className="dragLabel">
-                                            {value.toString()}
-                                        </div>
-                                    </Draggable>
-                                </div>
-                            </>
+                            <div className="listElement">
+                                <p key={name}><strong>{name}</strong>:</p>
+                                <Draggable bounds>
+                                    <div className="dragLabel">
+                                        {value.toString()}
+                                    </div>
+                                </Draggable>
+                            </div>
                         ))
                     )}
 
